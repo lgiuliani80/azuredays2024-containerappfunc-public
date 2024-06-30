@@ -135,7 +135,7 @@ The last command retrieves endpoint and key to be used in _DAPR Components Confi
 1. **netisolated8-dapr-input**:
 
    ```sh
-   docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-dapr-input:${IMAGEVERSION}" -f  netisolated8-dapr-input/Dockerfile .
+   docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-dapr-input:${IMAGEVERSION}" -f netisolated8-dapr-input/Dockerfile .
    docker push "${IMAGEPREFIX}netisolated8-dapr-input:$ {IMAGEVERSION}"
    az functionapp create --name net8daprinput --resource-group $RG  --storage-account $SA --environment $CAE --image "${IMAGEPREFIX} netisolated8-dapr-input:${IMAGEVERSION}" --enable-dapr true  --dapr-app-id netisolated8-dapr-input --dapr-log-level debug  --dapr-enable-api-logging true --dapr-app-port 3001
    ```
@@ -143,7 +143,7 @@ The last command retrieves endpoint and key to be used in _DAPR Components Confi
 2. **netinprocess6-dapr-output**:
 
    ```sh
-   docker build --progress=plain -t "${IMAGEPREFIX}  netinprocess6-dapr-output:${IMAGEVERSION}" -f   netinprocess6-dapr-output/Dockerfile .
+   docker build --progress=plain -t "${IMAGEPREFIX}  netinprocess6-dapr-output:${IMAGEVERSION}" -f  netinprocess6-dapr-output/Dockerfile .
    docker push "${IMAGEPREFIX}netinprocess6-dapr-output:$  {IMAGEVERSION}"
    az functionapp create --name net6daproutput --resource-group   $RG --storage-account $SA --environment $CAE --image "$  {IMAGEPREFIX}netinprocess6-dapr-output:${IMAGEVERSION}"   --enable-dapr true --dapr-app-id netinprocess6-dapr-output   --dapr-log-level debug --dapr-enable-api-logging true
    ```
@@ -151,15 +151,15 @@ The last command retrieves endpoint and key to be used in _DAPR Components Confi
 3. **netisolated8-queuetrigger**:
 
    ```sh
-   docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-queuetrigger:${IMAGEVERSION}" -f  netisolated8-queuetrigger/Dockerfile .
-   docker push "${IMAGEPREFIX}netisolated8-ffmpeg-test:$ {IMAGEVERSION}"
+   docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-queuetrigger:${IMAGEVERSION}" -f netisolated8-queuetrigger/Dockerfile .
+   docker push "${IMAGEPREFIX}netisolated8-ffmpeg-test:${IMAGEVERSION}"
    az functionapp create --name net8queuetrigger --resource-group  $RG --storage-account $SA --environment $CAE --image "$ {IMAGEPREFIX}netisolated8-queuetrigger:${IMAGEVERSION}"
    ```
 
 4. **netisolated8-ffmpeg-test**:
 
    ```sh
-   docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-ffmpeg-test:${IMAGEVERSION}" -f  netisolated8-ffmpeg-test/Dockerfile .
+   docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-ffmpeg-test:${IMAGEVERSION}" -f netisolated8-ffmpeg-test/Dockerfile .
    docker push "${IMAGEPREFIX}netisolated8-ffmpeg-test:$ {IMAGEVERSION}"
    az functionapp create --name net8ffmpegtest --resource-group  $RG --storage-account $SA --environment $CAE --image "$ {IMAGEPREFIX}netisolated8-ffmpeg-test:${IMAGEVERSION}" --cpu 2  --memory "4Gi" --workload-profile-name "dedicated-D4"
    ```
@@ -168,7 +168,7 @@ The last command retrieves endpoint and key to be used in _DAPR Components Confi
 
    ```sh
    cd nodejs-dapr
-   docker build --progress=plain -t "${IMAGEPREFIX}nodejs-dapr:$ {IMAGEVERSION}" .
+   docker build --progress=plain -t "${IMAGEPREFIX}nodejs-dapr:${IMAGEVERSION}" .
    docker push "${IMAGEPREFIX}nodejs-dapr:${IMAGEVERSION}"
    az functionapp create --name nodejsdapr --resource-group $RG  --storage-account $SA --environment $CAE --image "${IMAGEPREFIX} nodejs-dapr:${IMAGEVERSION}" --enable-dapr true --dapr-app-id nodejs-dapr --dapr-log-level debug --dapr-enable-api-logging  true
    cd ..
