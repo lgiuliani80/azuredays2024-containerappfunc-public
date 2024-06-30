@@ -145,7 +145,7 @@ The last command retrieves endpoint and key to be used in _DAPR Components Confi
    ```sh
    docker build --progress=plain -t "${IMAGEPREFIX}  netinprocess6-dapr-output:${IMAGEVERSION}" -f  netinprocess6-dapr-output/Dockerfile .
    docker push "${IMAGEPREFIX}netinprocess6-dapr-output:$  {IMAGEVERSION}"
-   az functionapp create --name net6daproutput --resource-group $RG --storage-account $SA --environment $CAE --image "$  {IMAGEPREFIX}netinprocess6-dapr-output:${IMAGEVERSION}" --enable-dapr true --dapr-app-id netinprocess6-dapr-output   --dapr-log-level debug --dapr-enable-api-logging true
+   az functionapp create --name net6daproutput --resource-group $RG --storage-account $SA --environment $CAE --image "${IMAGEPREFIX}netinprocess6-dapr-output:${IMAGEVERSION}" --enable-dapr true --dapr-app-id netinprocess6-dapr-output   --dapr-log-level debug --dapr-enable-api-logging true
    ```
 
 3. **netisolated8-queuetrigger**:
@@ -153,7 +153,7 @@ The last command retrieves endpoint and key to be used in _DAPR Components Confi
    ```sh
    docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-queuetrigger:${IMAGEVERSION}" -f netisolated8-queuetrigger/Dockerfile .
    docker push "${IMAGEPREFIX}netisolated8-ffmpeg-test:${IMAGEVERSION}"
-   az functionapp create --name net8queuetrigger --resource-group $RG --storage-account $SA --environment $CAE --image "$ {IMAGEPREFIX}netisolated8-queuetrigger:${IMAGEVERSION}"
+   az functionapp create --name net8queuetrigger --resource-group $RG --storage-account $SA --environment $CAE --image "${IMAGEPREFIX}netisolated8-queuetrigger:${IMAGEVERSION}"
    ```
 
 4. **netisolated8-ffmpeg-test**:
@@ -161,7 +161,7 @@ The last command retrieves endpoint and key to be used in _DAPR Components Confi
    ```sh
    docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-ffmpeg-test:${IMAGEVERSION}" -f netisolated8-ffmpeg-test/Dockerfile .
    docker push "${IMAGEPREFIX}netisolated8-ffmpeg-test:${IMAGEVERSION}"
-   az functionapp create --name net8ffmpegtest --resource-group $RG --storage-account $SA --environment $CAE --image "$ {IMAGEPREFIX}netisolated8-ffmpeg-test:${IMAGEVERSION}" --cpu 2  --memory "4Gi" --workload-profile-name "dedicated-D4"
+   az functionapp create --name net8ffmpegtest --resource-group $RG --storage-account $SA --environment $CAE --image "${IMAGEPREFIX}netisolated8-ffmpeg-test:${IMAGEVERSION}" --cpu 2  --memory "4Gi" --workload-profile-name "dedicated-D4"
    ```
 
 5. **nodejs-dapr**:
