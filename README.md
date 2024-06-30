@@ -3,9 +3,15 @@
 This repo contains a number of example functions showing the capabilities that function can gain when running as a Container App.  
 In particular the focus will be on:
 
-* _DAPR Integration_: **netisolated8-dapr-input**, **netinprocess6-dapr-output**, **nodejs-dapr**, **netisolated8-openai**
-* _KEDA Scaling_: **netisolated8-queuetrigger**
-* _Customized image_: **netisolated8-ffmpeg-test**
+* _DAPR Integration_:
+  * **netisolated8-dapr-input**: DAPR Service-To-Service invocation target, DAPR Input Binding
+  * **netinprocess6-dapr-output**: DAPR Output Binding
+  * **nodejs-dapr**: DAPR State Input, DAPR State Output, DAPR output binding to a non-Microsoft service
+  * **netisolated8-openai**: direct HTTP call to DAPR sidecar to invoke an output binding with result
+* _Automatic KEDA Scaling_:
+  * **netisolated8-queuetrigger**
+* _Customized image_:
+  * **netisolated8-ffmpeg-test**: customized image with FFmpeg installed running running in dedicated compute resource (= workload profile).
 
 Look at [tests.http](tests.http) for more details.
 
