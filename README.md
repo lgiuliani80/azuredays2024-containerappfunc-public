@@ -219,7 +219,7 @@ Refer to [tests.http](tests.http) file to see how to test all the functions.
 
 ## Appendix
 
-### Mount an S3 Bucket in Linux via Fuse filesystem (optional)
+### Mount a S3 Bucket in Linux via s3fs FUSE filesystem
 
 `nodejs-dapr` example does involve a DAPR output binding towards a S3 bucket. In order to easily read/write on
 S3 buckets you can leverage s3fs Linux FUSE filesystem driver, using the instructions below.
