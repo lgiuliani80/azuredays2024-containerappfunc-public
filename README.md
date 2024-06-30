@@ -6,8 +6,8 @@ In particular the focus will be on:
 * _DAPR Integration_:
   * **netisolated8-dapr-input**: DAPR Service-To-Service invocation target, DAPR Input Binding
   * **netinprocess6-dapr-output**: DAPR Output Binding
-  * **nodejs-dapr**: DAPR State Input, DAPR State Output, DAPR output binding to a non-Microsoft service
-  * **netisolated8-openai**: direct HTTP call to DAPR sidecar to invoke an output binding with result
+  * **nodejs-dapr**: DAPR State Input, DAPR State Output, DAPR Output Binding to a non-Microsoft service
+  * **netisolated8-openai**: explicit HTTP call to DAPR sidecar to invoke an Output Binding with result
 * _Automatic KEDA Scaling_:
   * **netisolated8-queuetrigger**
 * _Customized image_:
