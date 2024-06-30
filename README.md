@@ -7,6 +7,8 @@ In particular the focus will be on:
 * _KEDA Scaling_: **netisolated8-queuetrigger**
 * _Customized image_: **netisolated8-ffmpeg-test**
 
+Look at [tests.http](tests.http) for more details.
+
 ## Required Dependant Azure Resources
 
 Initial commands:

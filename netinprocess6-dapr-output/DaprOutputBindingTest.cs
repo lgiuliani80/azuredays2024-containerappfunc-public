@@ -16,7 +16,7 @@ public static class DaprOutputBindingTest
 {
     [FunctionName(nameof(DaprOutputBindingTest))]
     public static async Task<IActionResult> Run(
-        [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
         [DaprBinding(BindingName = "pgdb")] IAsyncCollector<JObject> pgdb,
         ILogger log)
     {

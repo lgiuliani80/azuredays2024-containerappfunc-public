@@ -15,15 +15,20 @@ GET https://testserviceinvocation.{{caehostname}}/call
 
 ###
 // 4. netinprocess6-dapr-output: DAPR Output Binding: Postgres
-GET https://net6daproutput.{{caehostname}}/api/DaprOutputBindingTest?code=7-LHry2JIwQcJMUUk4evqc4bfrLSN8azeM_RQdH9uSvGAzFuMld6og%3D%3D
+GET https://net6daproutput.{{caehostname}}/api/DaprOutputBindingTest
 
 ###
 // 5. netisolated8-ffmpeg-test: example of a customized container running on a Workload Profile
-GET https://net8ffmpegtest.{{caehostname}}/api/GenerateGif?code=KlDsbLGk9V7FdEnY0Q4DXqSPm90UZ_I_o_2-HV8XVTS0AzFuA9GJBw%3D%3D&inputFile=https://lgbackup1.blob.core.windows.net/downloads/_AzureDays/sample-video-1.mp4
+GET https://net8ffmpegtest.{{caehostname}}/api/GenerateGif?inputFile=https://lgbackup1.blob.core.windows.net/downloads/_AzureDays/sample-video-1.mp4
+// You can provide any video of yours that is reasonably small (must not exceed the max ephemeral storage size for Container Apps).
+// Two example public videos are provided:
+// - https://lgbackup1.blob.core.windows.net/downloads/_AzureDays/sample-video-1.mp4
+// - https://lgbackup1.blob.core.windows.net/downloads/_AzureDays/sample-video-2.mp4
+// The expected result is to receive an animated small .gif file representing the first 2 seconds of the video.
 
 ###
 // 6. nodejs-dapr: DAPR state management
-GET https://nodejsdapr.{{caehostname}}/api/daprStateTest?
+GET https://nodejsdapr.{{caehostname}}/api/daprStateTest
 // Verify that the number increases at each call. Verify that the returned value
 // is stored in statestore Azure Table in the Function Storage Account.
 

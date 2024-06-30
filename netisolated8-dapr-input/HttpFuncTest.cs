@@ -18,7 +18,7 @@ namespace NetIsolated8DaprInput
         [Function(nameof(HttpFuncTest))]
         [DaprStateOutput("azstatestore", Key = "lastExecution")]
 
-        public string Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
+        public string Run([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req)
         {
             _logger.LogInformation("HttpFuncTest called");
             //return new OkObjectResult("Welcome to Azure Functions!");

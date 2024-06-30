@@ -18,7 +18,7 @@ public class GenerateGif
     }
 
     [Function(nameof(GenerateGif))]
-    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req)
     {
         var inputFile = req.Query["inputFile"].FirstOrDefault();
 
