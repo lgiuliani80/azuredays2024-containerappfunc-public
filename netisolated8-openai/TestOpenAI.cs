@@ -29,7 +29,7 @@ namespace netisolated8_openai
                 operation = "chat-completion",
                 data = new
                 {
-                    deploymentId = "gpt35",
+                    deploymentId = "gpt-4o",
                     messages = new[] { 
                         new { 
                             role = "system", 
