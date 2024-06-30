@@ -226,3 +226,5 @@ chmod 600 ${HOME}/.passwd-s3fs
 s3fs s3-bucket-name /mnt/s3 -o passwd_file=${HOME}/.passwd-s3fs
 ls -la /mnt/s3
 ```
+
+This code works under WSL too.
