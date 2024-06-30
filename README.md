@@ -198,7 +198,7 @@ Configure the following components in the Container App environment either using
 
 | Name | Component Type | Version | Metadata | Scopes |
 |------|----------------|---------|----------|--------|
-| daprschedule | bindings.cron | v1 | * `schedule`: `@every 30s`<br />`direction`: `input` | netisolated8-dapr-input |
+| daprschedule | bindings.cron | v1 | * `schedule`: `@every 30s`<br />* `direction`: `input` | netisolated8-dapr-input |
 | pgdb | bindings.cron | v1 | * `connectionString`: `host=<postgres-server-endpoint> user=azuredays password=<postgres-server-password> port=5432 connect_timeout=10 database=daprdb` | netinprocess6-dapr-output |
 | azstatestore | state.azure.tablestorage | v1 | * `accountName`: `<sa-name>`<br />* `tableName`: `statestore`<br />* `accountKey`: `<sa-account-key>` | nodejs-dapr, testserviceinvocation |
 | s3bucket | bindings.aws.s3 | v1 | * `bucket`: `<s3-bucket-name>`<br />* `region`: `<aws-region-name>`<br /> * `accessKey`: `<aws-account-key>`<br />* `secretKey`: `<aws-secret-key>` | nodejs-dapr |
