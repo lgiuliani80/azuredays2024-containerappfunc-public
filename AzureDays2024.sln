@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BombQueue", "_bombqueue\BombQueue.csproj", "{CE49A05B-45F4-48D6-B290-D6AA9380F20A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netisolated8-dapr-input", "netisolated8-dapr-input\netisolated8-dapr-input.csproj", "{3D6EFC9C-B006-4FE5-8C50-5E3BED08026A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netinprocess6-dapr-output", "netinprocess6-dapr-output\netinprocess6-dapr-output.csproj", "{9E6D4CC8-476C-447C-8D55-B9B38CD5A2BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netisolated8-queuetrigger", "netisolated8-queuetrigger\netisolated8-queuetrigger.csproj", "{FD6DF422-D513-4EC3-91C4-E05B2319E98D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netisolated8-openai", "netisolated8-openai\netisolated8-openai.csproj", "{35992BE4-4D89-41D2-98E2-0CFEEBFA86D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE49A05B-45F4-48D6-B290-D6AA9380F20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE49A05B-45F4-48D6-B290-D6AA9380F20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE49A05B-45F4-48D6-B290-D6AA9380F20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE49A05B-45F4-48D6-B290-D6AA9380F20A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D6EFC9C-B006-4FE5-8C50-5E3BED08026A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D6EFC9C-B006-4FE5-8C50-5E3BED08026A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D6EFC9C-B006-4FE5-8C50-5E3BED08026A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D6EFC9C-B006-4FE5-8C50-5E3BED08026A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6D4CC8-476C-447C-8D55-B9B38CD5A2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6D4CC8-476C-447C-8D55-B9B38CD5A2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6D4CC8-476C-447C-8D55-B9B38CD5A2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6D4CC8-476C-447C-8D55-B9B38CD5A2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD6DF422-D513-4EC3-91C4-E05B2319E98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD6DF422-D513-4EC3-91C4-E05B2319E98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD6DF422-D513-4EC3-91C4-E05B2319E98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD6DF422-D513-4EC3-91C4-E05B2319E98D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35992BE4-4D89-41D2-98E2-0CFEEBFA86D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35992BE4-4D89-41D2-98E2-0CFEEBFA86D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35992BE4-4D89-41D2-98E2-0CFEEBFA86D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35992BE4-4D89-41D2-98E2-0CFEEBFA86D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E56D5572-E597-4E1B-AE2E-97985BCDCC60}
+	EndGlobalSection
+EndGlobal

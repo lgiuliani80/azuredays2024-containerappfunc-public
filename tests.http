@@ -1,0 +1,37 @@
+@caehostname=put-container-app-environment-base-hostname-here
+
+// 1. net8isolated-dapr-input: DAPR Service-to-Service invocation from Container App to Function App
+GET https://testserviceinvocation.{{caehostname}}/call
+// Verify that the output that you get matches the output expected from
+// netisolated8-dapr-input\ServiceInvocationTest.cs "createorder" function.
+
+// 2. net8isolated-dapr-input: DAPR Input Binding: Schedule
+// In Portal UI inspect executions and see that the execution rate matches the schedule
+// defined in DAPR Component "daprschedule"
+
+// 3. netisolated8-queuetrigger: example of scaling
+// Run _bombqueue/BombQueue.csproj and, according to its settings,
+// verify that the Container App associated to net8isolated-dapr-input is scaling up.
+
+###
+// 4. netinprocess6-dapr-output: DAPR Output Binding: Postgres
+GET https://net6daproutput.{{caehostname}}/api/DaprOutputBindingTest?code=7-LHry2JIwQcJMUUk4evqc4bfrLSN8azeM_RQdH9uSvGAzFuMld6og%3D%3D
+
+###
+// 5. netisolated8-ffmpeg-test: example of a customized container running on a Workload Profile
+GET https://net8ffmpegtest.{{caehostname}}/api/GenerateGif?code=KlDsbLGk9V7FdEnY0Q4DXqSPm90UZ_I_o_2-HV8XVTS0AzFuA9GJBw%3D%3D&inputFile=https://lgbackup1.blob.core.windows.net/downloads/_AzureDays/sample-video-1.mp4
+
+###
+// 6. nodejs-dapr: DAPR state management
+GET https://nodejsdapr.{{caehostname}}/api/daprStateTest?
+// Verify that the number increases at each call. Verify that the returned value
+// is stored in statestore Azure Table in the Function Storage Account.
+
+// 7. nodejs-dapr: on blob created -> DAPR Output Binding to AWS S3
+// Upload a blob in 'azdays2024' blob container and check that it is transferred to DAPR-bound S3 bucket.
+// Tested with text files only.
+
+###
+// 8. netisolated8-openai -> DAPR Output Binding to OpenAI
+GET https://net8openai.{{caehostname}}/api/TestOpenAI?city=Rome&lang=EN
+// Try to change city and lang and verify that the description of the city is meaningful for the specified language (ISO code).

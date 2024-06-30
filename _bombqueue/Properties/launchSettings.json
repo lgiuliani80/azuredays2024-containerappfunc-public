@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "AzureQueue": {
+      "commandName": "Project",
+      "commandLineArgs": "queue 10000",
+      "environmentVariables": {
+        "QueueName": "items",
+        "AzureWebJobsStorage": "<REPLACE-WITH-STORAGE-ACCOUNT-CONNECTIONSTRING>"
+      }
+    },
+    "EventHub": {
+      "commandName": "Project",
+      "commandLineArgs": "eventhub 1000000",
+      "environmentVariables": {
+        "EHConnectionString": "<REPLACE-WITH-EVENTHUB-CONNECTIONSTRING>",
+        "EventHubName": "items",
+      }
+    }
+  }
+}
