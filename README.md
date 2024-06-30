@@ -85,7 +85,7 @@ CREATE DATABASE daprdb
     IS_TEMPLATE = False;
 ```
 
-The use 'daprdb' database and issue:
+Then use 'daprdb' database and issue:
 
 ```sql
 CREATE SEQUENCE IF NOT EXISTS public.executions_id_seq
