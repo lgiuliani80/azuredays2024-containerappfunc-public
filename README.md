@@ -209,3 +209,20 @@ Configure the following components in the Container App environment either using
 ## Test the deployed functions
 
 Refer to [tests.http](tests.http) file to see how to test all the functions.
+
+## Appendix
+
+### Mount an S3 Bucket in Linux via Fuse filesystem (optional)
+
+`nodejs-dapr` example does involve a DAPR output binding towards a S3 bucket. In order to easily read/write on
+S3 buckets you can leverage s3fs Linux FUSE filesystem driver, using the instructions below.
+
+```sh
+sudo apt install s3fs
+sudo mkdir /mnt/s3
+sudo chmod 777 /mnt/s3
+echo aws-account-key:aws-secret-key > ${HOME}/.passwd-s3fs
+chmod 600 ${HOME}/.passwd-s3fs
+s3fs s3-bucket-name /mnt/s3 -o passwd_file=${HOME}/.passwd-s3fs
+ls -la /mnt/s3
+```
