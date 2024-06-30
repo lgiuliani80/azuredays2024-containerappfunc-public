@@ -34,6 +34,7 @@ az containerapp env create -n azdays2024-cae -g $RG --location $DEFAULTLOCATION 
 az containerapp env workload-profile add -n azdays2024-cae -g $RG --name "dedicated-D4" --workload-profile "Dedicated-D4" --min-nodes "0" --max-nodes "2"
 az acr create -n azdays2024acr --resource-group $RG --sku Standard --admin-enabled true --location $DEFAULTLOCATION
 az storage account create -n $SA --resource-group $RG --location $DEFAULTLOCATION --sku Standard_LRS
+az containerapp env show -n azdays2024-cae -g $RG  # Take 'defaultDomain' property and use to it value caehostname variable in tests.http
 ```
 
 ### Resources for netisolated8-queuetrigger
