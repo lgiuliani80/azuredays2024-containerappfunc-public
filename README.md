@@ -160,7 +160,7 @@ The last command retrieves endpoint and key to be used in _DAPR Components Confi
 
    ```sh
    docker build --progress=plain -t "${IMAGEPREFIX} netisolated8-ffmpeg-test:${IMAGEVERSION}" -f netisolated8-ffmpeg-test/Dockerfile .
-   docker push "${IMAGEPREFIX}netisolated8-ffmpeg-test:$ {IMAGEVERSION}"
+   docker push "${IMAGEPREFIX}netisolated8-ffmpeg-test:${IMAGEVERSION}"
    az functionapp create --name net8ffmpegtest --resource-group $RG --storage-account $SA --environment $CAE --image "$ {IMAGEPREFIX}netisolated8-ffmpeg-test:${IMAGEVERSION}" --cpu 2  --memory "4Gi" --workload-profile-name "dedicated-D4"
    ```
 
