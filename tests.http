@@ -16,6 +16,9 @@ GET https://testserviceinvocation.{{caehostname}}/call
 ###
 // 4. netinprocess6-dapr-output: DAPR Output Binding: Postgres
 GET https://net6daproutput.{{caehostname}}/api/DaprOutputBindingTest
+// After every execution issue a SELECT * FROM executions SQL command in "daprdb" Postgres database: a new
+// row should appear, including the execution timestamp AND the hostname which matches the revision name of 
+// the underlying container app.
 
 ###
 // 5. netisolated8-ffmpeg-test: example of a customized container running on a Workload Profile
